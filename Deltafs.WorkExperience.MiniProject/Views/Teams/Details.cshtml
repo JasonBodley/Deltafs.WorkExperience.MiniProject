@@ -17,6 +17,21 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
     </dl>
+    <!-- TODO: 7b) Uncomment the below code (remove the @@*s) and complete to list all players of this team. We want it to show the name and number of the player.
+      hint: It may be easy to use .ToString() here.
+      You should also make sure that they are sorted in an order of your choice (e.g. Name or Number) ... use .OrderBy(...) function to acheive this.
+    -->
+    @*<dl class="row">
+      <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Players)
+      </dt>
+      <ul>
+        @foreach (var player in Model.Players)
+        {
+          <li>???</li>
+        }
+      </ul>
+    </dl>*@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |

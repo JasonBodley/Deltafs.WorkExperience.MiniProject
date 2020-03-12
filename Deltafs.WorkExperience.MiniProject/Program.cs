@@ -4,12 +4,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Threading.Tasks;
 
 namespace Deltafs.WorkExperience.MiniProject
 {
 	public class Program
 	{
-		public static void Main(string[] args)
+		public static async Task Main(string[] args)
 		{
 			var host = CreateHostBuilder(args).Build();
 
@@ -19,7 +20,7 @@ namespace Deltafs.WorkExperience.MiniProject
 				try
 				{
 					var context = services.GetRequiredService<LeagueContext>();
-					DbInitializer.Initialize(context);
+					await DbInitializer.Initialize(context);
 				}
 				catch (Exception ex)
 				{
