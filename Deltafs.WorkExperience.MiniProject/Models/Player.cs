@@ -15,11 +15,13 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 
 		// TODO: 2) This is showing up as the variable name 'LastName' on the web site, change it to make sure it's showing 'Last Name' hint: 'FirstName' is working fine
 		// TODO: 6b) Last Name should be mandatory
+		[DisplayName("Last Name")]
 		public string LastName { get; set; }
 
 		public int Number { get; set; }
 
 		// TODO: 3) This is not showing up on any of the List, Create or Details screens. Add it to those screens and check the values are showing correctly
+		[DisplayName("Position")]
 		public string Position { get; set; }
 
 		// TODO: 5) Iry and create a player without assigning a Team ... fix it by making this [Required]
