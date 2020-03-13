@@ -21,6 +21,10 @@
 			<th>
 				@Html.DisplayNameFor(model => model.Number)
 			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Position)
+			</th>
+
 			<!-- TODO: 3e) Add another column to show the 'Position' label -->
 			<th></th>
 		</tr>
@@ -37,6 +41,12 @@
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.Number)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Position)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Team.Name)
 				</td>
 				<!-- TODO: 3e) Add another column to show the 'Position' value -->
 				<!-- TODO: 4b) Add the Name of the players team here following the examples above. (item.Team.Name) -->

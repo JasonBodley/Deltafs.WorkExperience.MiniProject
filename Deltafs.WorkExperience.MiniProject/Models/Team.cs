@@ -6,7 +6,7 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 	public class Team
 	{
 		[Key]
-		public int Id { get; set; }
+		public int? Id { get; set; }
 
 		public string Name { get; set; }
 

@@ -1,6 +1,7 @@
 ﻿using Deltafs.WorkExperience.MiniProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -144,7 +145,7 @@ namespace Deltafs.WorkExperience.MiniProject.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
-		private bool TeamExists(int id)
+		private bool TeamExists(int? id)
 		{
 			return _context.Teams.Any(e => e.Id == id);
 		}

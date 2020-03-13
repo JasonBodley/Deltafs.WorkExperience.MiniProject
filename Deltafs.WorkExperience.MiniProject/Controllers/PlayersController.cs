@@ -44,7 +44,7 @@ namespace Deltafs.WorkExperience.MiniProject.Controllers
 		public async Task<IActionResult> Create()
 		{
 			var teams = await _context.Teams.Select(t => new { t.Id, t.Name }).OrderBy(t => t.Name).ToListAsync();
-			teams.Add(new { Id = 0, Name = " -- Select -- " });
+			teams.Add(new { Id = default(int?), Name = " -- Select -- " });
 			ViewBag.Teams = teams;
 			return View();
 		}
@@ -55,7 +55,7 @@ namespace Deltafs.WorkExperience.MiniProject.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		// TODO: 3a) Make sure that this is binding to the 'Position' property
-		public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Number,TeamId")] Player player)
+		public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Number,Position,TeamId")] Player player)
 		{
 			if (ModelState.IsValid)
 			{
@@ -88,7 +88,7 @@ namespace Deltafs.WorkExperience.MiniProject.Controllers
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		// TODO: 3b) Make sure that this is binding to the 'Position' property
-		public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Number")] Player player)
+		public async Task<IActionResult> Edit(int id, [Bind("Id,FirstName,LastName,Number,Position,TeamID")] Player player)
 		{
 			if (id != player.Id)
 			{
