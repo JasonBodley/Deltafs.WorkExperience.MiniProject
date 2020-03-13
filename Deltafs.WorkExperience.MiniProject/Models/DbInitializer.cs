@@ -29,6 +29,16 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 				Name = "Manchester City",
 				Nickname = "Man City"
 			};
+			var man_united = new Team
+			{
+				Name = "Manchester United",
+				Nickname = "The Red Devils"
+			};
+			var chelsea = new Team
+			{
+				Name = "Chelsea",
+				Nickname = "The Blues",
+			};
 			var rui = new Player
 			{
 				FirstName = "Rui",
@@ -42,7 +52,7 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 				FirstName = "Jonny",
 				LastName = "Castro Otto",
 				Number = 19,
-				Position = "Full Back",
+				Position = "Wing Back",
 				Team = wolves
 			};
 			var boly = new Player
@@ -74,7 +84,7 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 				FirstName = "Matt",
 				LastName = "Doherty",
 				Number = 2,
-				Position = "Full Back",
+				Position = "Wing Back",
 				Team = wolves
 			};
 			var moutinho = new Player
@@ -293,10 +303,124 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 				Position = "Right Winger",
 				Team = man_city
 			};
+			var degea = new Player
+			{
+				FirstName = "David",
+				LastName = "de Gea",
+				Number = 1,
+				Position = "Goalkeeper",
+				Team = man_united
+			};
+			var luke = new Player
+			{
+				FirstName = "Luke",
+				LastName = "Shaw",
+				Number = 23,
+				Position = "Full Back",
+				Team = man_united
+			};
+			var victor = new Player
+			{
+				FirstName = "Victor",
+				LastName = "Lindelöf",
+				Number = 2,
+				Position = "Centre Back",
+				Team = man_united
+			};
+			var harry = new Player
+			{
+				FirstName = "Harry",
+				LastName = "Maguire",
+				Number = 5,
+				Position = "Centre Back",
+				Team = man_united
+			};
+			var awb = new Player
+			{
+				FirstName = "Aaron",
+				LastName = "Wan-Bissaka",
+				Number = 29,
+				Position = "Full Back",
+				Team = man_united
+			};
+			var fred = new Player
+			{
+				FirstName = "Frederico",
+				LastName = "Rodrigues de Paula Santos",
+				Number = 17,
+				Position = "Midfielder",
+				Team = man_united
+			};
+			var scott = new Player
+			{
+				FirstName = "Scott",
+				LastName = "McTominay",
+				Number = 39,
+				Position = "Midfielder",
+				Team = man_united
+			};
+			var bruno = new Player
+			{
+				FirstName = "Bruno",
+				LastName = "Fernandes",
+				Number = 18,
+				Position = "Midfielder",
+				Team = man_united
+			};
+			var martial = new Player
+			{
+				FirstName = "Anthony",
+				LastName = "Martial",
+				Number = 9,
+				Position = "Left Winger/Striker",
+				Team = man_united
+			};
+			var odion = new Player
+			{
+				FirstName = "Odion",
+				LastName = "Ighalo",
+				Number = 25,
+				Position = "Striker",
+				Team = man_united
+			};
+			var djames = new Player
+			{
+				FirstName = "Daniel",
+				LastName = "James",
+				Number = 21,
+				Position = "Right Winger",
+				Team = man_united
+			};
+			var kepa = new Player
+			{
+				FirstName = "Kepa",
+				LastName = "Arrizabalaga Revuelta",
+				Number = 1,
+				Position = "Goalkeeper",
+				Team = chelsea
+			};
+			var alonso = new Player
+			{
+				FirstName = "Marcos",
+				LastName = "Alonso",
+				Number = 3,
+				Position = "Full Back",
+				Team = chelsea
+			};
+			var antonio = new Player
+			{
+				FirstName = "Antonio",
+				LastName = "Rüdiger",
+				Number = 2,
+				Position = "Centre Back"
+				Team = chelsea
+			};
 
 			context.Teams.Add(wolves);
 			context.Teams.Add(liverpool);
 			context.Teams.Add(man_city);
+			context.Teams.Add(man_united);
+			context.Teams.Add(chelsea);
 			context.Players.Add(rui);
 			context.Players.Add(jonny);
 			context.Players.Add(boly);
@@ -330,6 +454,20 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 			context.Players.Add(jesus);
 			context.Players.Add(sergio);
 			context.Players.Add(riyad);
+			context.Players.Add(degea);
+			context.Players.Add(luke);
+			context.Players.Add(victor);
+			context.Players.Add(harry);
+			context.Players.Add(awb);
+			context.Players.Add(fred);
+			context.Players.Add(scott);
+			context.Players.Add(bruno);
+			context.Players.Add(martial);
+			context.Players.Add(odion);
+			context.Players.Add(djames);
+			context.Players.Add(kepa);
+			context.Players.Add(alonso);
+			context.Players.Add(antonio);
 			// Save the changes to the database
 			context.SaveChanges();
 		}
