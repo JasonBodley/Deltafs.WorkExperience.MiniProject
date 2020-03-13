@@ -33,7 +33,7 @@ namespace Deltafs.WorkExperience.MiniProject.Controllers
 			// TODO: 7a) Run this in debug and put a breakpoint here. By default, the 'Players' list won't be populated. We need to 'Include' it.
 			// _context.Teams.Include(???).FirstOrDefaultAsync(m => m.Id == id);
 			// Run it in debug again and ensure the 'Players' list no has a list of player values in it.
-			var team = await _context.Teams
+			var team = await _context.Teams.Include(t => t.Players)
 					.FirstOrDefaultAsync(m => m.Id == id);
 			if (team == null)
 			{

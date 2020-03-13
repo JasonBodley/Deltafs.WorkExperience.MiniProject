@@ -30,5 +30,10 @@ namespace Deltafs.WorkExperience.MiniProject.Models
 		// TODO: 4) There is no reference to which Player a team in on the List / Details screens. Add it to those screens and check the values are showing correctly.
 		public Team Team { get; set; }
 
+		public override string ToString()
+		{
+			return $"{FirstName} {LastName} ({Number})";
+		}
+
 	}
 }
